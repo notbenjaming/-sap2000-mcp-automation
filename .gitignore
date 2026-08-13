@@ -1,0 +1,117 @@
+# =============================================================
+# .gitignore  —  结构工程师 / SAP2000 / Python / Office 通用版
+# 生成时间: 2026-08-13
+# =============================================================
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+ENV/
+
+# ---------- Jupyter ----------
+.ipynb_checkpoints/
+
+# ---------- SAP2000 / CSI 系列 ----------
+# SAP2000 v24 二进制模型（体积大、二进制差异不可合并）
+*.sdb
+*.sdb.lock
+*.sdb.bak
+*.SDB
+# ETABS / SAFE / CSiBridge 同样
+*.EDB
+*.EDB.bak
+# SAP2000 文本格式（$ 需转义）
+*.\$2k
+*.etabs_text
+*.SAFE
+*.S2K
+# 分析日志
+*.log
+*.LOG
+*.err
+
+# ---------- CAD / BIM ----------
+# AutoCAD
+*.bak
+*.dwl
+*.dwl2
+~$*.dwg
+~$*.dxf
+*.dwg
+*.dxf
+# Revit
+*.rvt
+*.rfa
+*.rte
+# Tekla / Bentley
+*.db1
+*.idb
+
+# ---------- Office 临时文件 ----------
+~$*.doc*
+~$*.xls*
+~$*.ppt*
+~$*.docx
+~$*.xlsx
+~$*.pptx
+*.tmp
+
+# ---------- Windows / 系统文件 ----------
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+System Volume Information/
+
+# ---------- IDE / 编辑器 ----------
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ---------- Node / 前端（万一引入） ----------
+node_modules/
+.npm
+.yarn/
+.pnp.*
+
+# ---------- 大型数据 / 输出 ----------
+*.csv
+*.parquet
+*.h5
+*.hdf5
+*.feather
+
+# ---------- 截图 / 调试 ----------
+*.png
+*.mp4
+*.gif
+
+# ---------- 环境与密钥（绝不入库） ----------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+secrets.yaml
+credentials.json
